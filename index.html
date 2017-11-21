@@ -3,12 +3,15 @@
   <title>PeerJS - Video chat example</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script type="text/javascript" src="https://skyway.io/dist/dev/webrtc-shim/adapter.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.js"></script>
   <script>
     // Compatibility shim
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     // PeerJS object
-    var peer = new Peer({ key: 'ujj7spkaoto3whfr', debug: 3, secure: true });
+    // 34f289aa-1414-44ed-a7f7-8527aadbf4d9
+    // ujj7spkaoto3whfr
+    var peer = new Peer({ key: '34f289aa-1414-44ed-a7f7-8527aadbf4d9', debug: 3, secure: true });
     peer.on('open', function(){
       $('#my-id').text(peer.id);
     });
